@@ -82,7 +82,7 @@ public class WithdrawalSuccessFrame extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				Toolkit.getDefaultToolkit().beep();
-				JOptionPane.showMessageDialog(null, "请在30秒内取走您的卡片", "提示", 1);
+				JOptionPane.showMessageDialog(null, "请在30秒内取走您的卡片", "提示", 1); // test1
 				WelcomeFrame chooseCardFrame = new WelcomeFrame();
 				ATMFrame.c.remove(1);
 				ATMtest.frame.repaint();
