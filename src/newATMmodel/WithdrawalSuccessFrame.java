@@ -17,11 +17,11 @@ public class WithdrawalSuccessFrame extends JPanel {
 	 */
 	private static final long serialVersionUID = 4085187485255219484L;
 
-	private PersonalInform personal = null;// ³õÊ¼»¯ÓÃ»§ĞÅÏ¢¶ÔÏó±äÁ¿
+	private PersonalInform personal = null;// åˆå§‹åŒ–ç”¨æˆ·ä¿¡æ¯å¯¹è±¡å˜é‡
 
 	public WithdrawalSuccessFrame(PersonalInform personal) {
-		this.personal = personal;// µÃµ½ÉÏ¸öÃæ°åµÄ¶ÔÏó
-		init();// Ö÷·½·¨
+		this.personal = personal;// å¾—åˆ°ä¸Šä¸ªé¢æ¿çš„å¯¹è±¡
+		init();// ä¸»æ–¹æ³•
 	}
 
 	public void init() {
@@ -29,19 +29,19 @@ public class WithdrawalSuccessFrame extends JPanel {
 		this.setLayout(new BorderLayout());
 		this.setBounds(0, 60, 580, 390);
 
-		JButton showBalance = new JButton("ÏÔÊ¾Óà¶î");
-		JButton continueTo = new JButton("¼ÌĞø");
-		JButton exit = new JButton("ÍË¿¨");
+		JButton showBalance = new JButton("æ˜¾ç¤ºä½™é¢");
+		JButton continueTo = new JButton("ç»§ç»­");
+		JButton exit = new JButton("é€€å¡");
 
 		JPanel choosePanel = new JPanel();
 		JPanel exitPanel = new JPanel();
 
 		choosePanel.setOpaque(false);
-		choosePanel.setBorder(BorderFactory.createTitledBorder("Ñ¡Ïî"));
+		choosePanel.setBorder(BorderFactory.createTitledBorder("é€‰é¡¹"));
 		choosePanel.setLayout(new FlowLayout());
 
 		exitPanel.setOpaque(false);
-		exitPanel.setBorder(BorderFactory.createTitledBorder("ÍË³ö"));
+		exitPanel.setBorder(BorderFactory.createTitledBorder("é€€å‡º"));
 		exitPanel.setLayout(new BorderLayout());
 
 		choosePanel.add(showBalance);
@@ -52,23 +52,23 @@ public class WithdrawalSuccessFrame extends JPanel {
 		add(exitPanel, BorderLayout.SOUTH);
 
 		showBalance.addActionListener(new ActionListener() {
-			// ÏÔÊ¾Óà¶î
+			// æ˜¾ç¤ºä½™é¢
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				Toolkit.getDefaultToolkit().beep();
 				JOptionPane.showMessageDialog(null,
-						"Óà¶î: " + personal.getRental() + "Ôª", "ÏÔÊ¾Óà¶î", 1);// µ¯³ö¶Ô»°¿ò£¬»ñÈ¡µ±Ç°ÓÃ»§ÔÚÊı¾İ¿âÖĞµÄÓà¶îĞÅÏ¢
+						"ä½™é¢: " + personal.getRental() + "å…ƒ", "æ˜¾ç¤ºä½™é¢", 1);// å¼¹å‡ºå¯¹è¯æ¡†ï¼Œè·å–å½“å‰ç”¨æˆ·åœ¨æ•°æ®åº“ä¸­çš„ä½™é¢ä¿¡æ¯
 			}
 		});
 
 		continueTo.addActionListener(new ActionListener() {
-			// ¼ÌĞø
+			// ç»§ç»­
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				Toolkit.getDefaultToolkit().beep();
-				MainFrame mainFrame = new MainFrame(personal);// ÊµÀı»¯Ö÷·şÎñÃæ°å¶ÔÏó£¬´«Èëµ±Ç°ÓÃ»§¶ÔÏó
+				MainFrame mainFrame = new MainFrame(personal);// å®ä¾‹åŒ–ä¸»æœåŠ¡é¢æ¿å¯¹è±¡ï¼Œä¼ å…¥å½“å‰ç”¨æˆ·å¯¹è±¡
 				ATMFrame.c.remove(1);
 				ATMtest.frame.repaint();
 				ATMFrame.c.add(mainFrame);
@@ -77,12 +77,12 @@ public class WithdrawalSuccessFrame extends JPanel {
 		});
 
 		exit.addActionListener(new ActionListener() {
-			// ÍË¿¨
+			// é€€å¡
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				Toolkit.getDefaultToolkit().beep();
-				JOptionPane.showMessageDialog(null, "ÇëÔÚ30ÃëÄÚÈ¡×ßÄúµÄ¿¨Æ¬", "ÌáÊ¾", 1); // test1
+				JOptionPane.showMessageDialog(null, "è¯·åœ¨30ç§’å†…å–èµ°æ‚¨çš„å¡ç‰‡", "æç¤º", 1); // test
 				WelcomeFrame chooseCardFrame = new WelcomeFrame();
 				ATMFrame.c.remove(1);
 				ATMtest.frame.repaint();
